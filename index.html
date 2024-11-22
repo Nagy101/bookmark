@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =========== sweetalert Link =========== -->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <!-- =========== Fonts Link =========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- =========== Fontawesome Link =========== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- =========== Fav Link =========== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Bookmarker</title>
+    <!-- =========== Bootstrap Link =========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- =========== CSS Link =========== -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="position-relative">
+        <h1 class="py-5">Bookmarker</h1>
+        <div class="doted"></div>
+      </div>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center p-3"
+      >
+        <h2>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="siteName d-flex w-100 flex-column my-2">
+          <label class="fw-semibold py-2" for="siteName"
+            ><i class="fa-solid fa-book-bookmark mx-1"></i> Site Name</label
+          >
+          <input
+            oninput="validationFirstInput(this)"
+            id="siteName"
+            type="text"
+            placeholder="Bookmark Name"
+            class="form-control"
+          />
+        </div>
+        <div class="siteURL d-flex w-100 flex-column my-2">
+          <label class="fw-semibold py-2" for="siteURL"
+            ><i class="fa-solid fa-link"></i> Site URL</label
+          >
+          <input
+            oninput="validationFirstInput(this)"
+            type="text"
+            id="siteURL"
+            placeholder="Website URL"
+            class="form-control"
+          />
+        </div>
+        <button onclick="submite()" class="btn mt-5 subBtn">Submit</button>
+      </div>
+      <div class="doted"></div>
+
+      <table class="table text-center mt-4">
+        <tr class="fw-bold">
+          <td>index</td>
+          <td>Website Name</td>
+          <td>Visit</td>
+          <td>Delete</td>
+        </tr>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div
+        class="lightbox-contaner top-0 bottom-0 end-0 start-0 position-fixed d-none justify-content-center align-items-center"
+      >
+        <div class="lightbox-item ">
+          <div class="circle d-flex m-4 position-relative">
+            <span class="bg-danger"></span>
+            <span class="bg-warning"></span>
+            <span class="bg-success"></span>
+            <i id="close" class="fa-solid fa-xmark position-absolute end-0"></i>
+          </div>
+          <div class="text mx-4">
+            <h5>
+              Site Name or Url is not valid, Please follow the rules below :
+            </h5>
+            <p class="text-black">
+              <i class="fa-regular fa-circle-right text-danger"></i> Site name
+              must contain at least 3 characters
+            </p>
+            <p class="text-black">
+              <i class="fa-regular fa-circle-right text-danger"></i> Site URL
+              must be a valid one
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js
+    "></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

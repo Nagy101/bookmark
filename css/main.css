@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7ecde;
+}
+
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+h1::before {
+  content: "";
+  width: 21%;
+  height: 22px;
+  background-color: #fec260;
+  position: absolute;
+  bottom: 35%;
+  z-index: -100;
+  transition: all 0.5s;
+}
+
+h1:hover::before {
+  height: 35px;
+}
+
+.doted {
+  border-bottom: 2px dotted black;
+}
+
+h2 {
+  background: linear-gradient(to right, #57AB67, #fec260);
+  background-clip: text;
+  color: transparent;
+  font-family: "Righteous", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.form-control {
+  padding: 5px;
+}
+
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+  ;
+}
+
+.subBtn {
+  width: 12%;
+  color: #fff;
+  background-color: #D1512D;
+  transition: all 0.4s;
+  font-size: 18px;
+}
+
+.subBtn:hover {
+  background-color: #a43e21;
+  color: #fff;
+}
+
+.doted {
+  border-bottom: 2px dotted black;
+}
+
+.table {
+  background-color: #F8F9FA;
+}
+
+.table>:not(caption)>*>* {
+  background-color: #F8F9FA;
+}
+
+#visitBtn {
+  background-color: #8A9E23;
+  color: #fff;
+}
+
+#deleteBtn {
+  background-color: #EB1D36;
+  color: #fff;
+}
+
+#visitBtn:hover {
+  background-color: #7e9120;
+  color: #fff;
+}
+
+#deleteBtn:hover {
+  background-color: #cb1a2f;
+  color: #fff;
+}
+
+.lightbox-contaner {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-item {
+  background-color: #fff;
+  width: 30%;
+  height: 35vh;
+}
+.circle span{
+  width: 20px;
+  height: 20px;
+  background-color: #352e28;
+  border-radius: 50%;
+  margin: 3px;
+}
+.circle i{
+  font-size: 20px;
+}
+i{
+  cursor: pointer;
+}
